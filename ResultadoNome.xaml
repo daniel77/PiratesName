@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PiratesName.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="24,0,0,0">
+            <TextBlock HorizontalAlignment="Left" Margin="52,119,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="337" Name="resultado"/>
+            <Button Content="Conectar Ao Facebook" HorizontalAlignment="Left" Margin="27,307,0,0" VerticalAlignment="Top" Click="Button_Click_3" Name="botaoFace"/>
+            <Button Content="Postar Nome" HorizontalAlignment="Left" Margin="27,379,0,0" VerticalAlignment="Top" Click="Button_Click_2" IsEnabled="False" Name="botaoPostar"/>
+            <TextBlock HorizontalAlignment="Left" Margin="52,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="337" Name="nomeOriginal"/>
+
+        </Grid>
+        
+        
+    </Grid>
+
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+
+            <shell:ApplicationBarIconButton Click="Inicio"  IconUri="/imagens/add.png" Text="novo" />
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click_1" IconUri="/imagens/questionmark.png" Text="sobre"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>
